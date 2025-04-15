@@ -1,3 +1,29 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/fb_DPemA)
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=18927133)
 Mongo example with python
+
+# Acme Loan Tracker – MongoDB Prototype
+
+This project implements a document-based system to manage and track special loan applications for Acme Financial Corp using MongoDB.
+
+It fulfills the enhanced requirements including:
+- Application submission
+- Status updates (received, processing, accepted, rejected)
+- Note tracking across subphases
+- Recording rejection reasons and loan terms
+
+---
+
+## Getting Started in GitHub Codespace
+
+Follow the steps below to install MongoDB, start the service, and run the test script inside your Codespace environment.
+
+---
+
+### Install MongoDB
+
+Open the terminal and run:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y mongodb
