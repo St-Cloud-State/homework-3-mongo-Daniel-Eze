@@ -1,5 +1,5 @@
 // Switch to or create the database
-use acmeLoans
+//use acmeLoans
 
 // Insert a new loan application
 db.applications.insertOne({
