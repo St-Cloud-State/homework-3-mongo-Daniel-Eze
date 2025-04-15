@@ -69,5 +69,5 @@ db.applications.updateOne(
 )
 
 // Show final result
-print("\n==== Final Application Document ====")
+print("\n Final Application Document ")
 printjson(db.applications.findOne({ app_id: "APP1001" }))
