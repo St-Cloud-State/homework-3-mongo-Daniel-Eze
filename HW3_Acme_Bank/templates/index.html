@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Acme Loan Tracker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Acme Loan Tracker</h1>
+
+  <!-- 1. Apply for Loan -->
+  <section id="apply">
+    <h2>1. Apply for Loan</h2>
+    <input id="name"    placeholder="Name"><br>
+    <input id="zipcode" placeholder="Zip code"><br>
+    <input id="address" placeholder="Address"><br>
+    <button onclick="createApplication()">Submit Application</button>
+    <p>Your Application ID: <span id="appId"></span></p>
+  </section>
+
+  <!-- 2. Check Status & Notes -->
+  <section id="status">
+    <h2>2. Check Status & Notes</h2>
+    <input id="checkAppId" placeholder="Enter Application ID"><br>
+    <button onclick="loadApplication()">Load Application</button>
+    <div id="result"></div>
+  </section>
+
+  <!-- 3. Add Note / Change Status -->
+  <section id="update" style="display:none;">
+    <h2>3. Add Note / Change Status</h2>
+    <label>
+      Select Applicant:
+      <select id="selectAppId"></select>
+    </label><br>
+    <label>
+      Phase:
+      <select id="phase">
+        <option value="personal_details">Personal Details Check</option>
+        <option value="credit_check">Credit Check</option>
+        <option value="certification_check">Certification Check</option>
+        <option value="accepted">Accepted</option>
+        <option value="rejected">Rejected</option>
+      </select>
+    </label><br>
+    <input id="message" placeholder="Note or reason"><br>
+    <button onclick="updateApplication()">Submit Update</button>
+  </section>
+
+  <!-- 4. View All Applications -->
+  <section id="viewAll">
+    <h2>4. View All Applications</h2>
+    <button onclick="loadAllApplications()">Load All Applications</button>
+    <div id="allApps"></div>
+  </section>
+
+  <!-- 5. Clear Database -->
+  <section id="clearDb">
+    <h2>5. Clear Database</h2>
+    <button onclick="clearDatabase()">Clear All Applications & Notes</button>
+  </section>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
